@@ -2,10 +2,12 @@ import './employers-list-item.css';
 
 
 const EmployersListItem = ({name, salary, increase}) => {
+
     let classNames = "list-group-item d-flex justify-content-between";
     if(increase){
         classNames += " increase"
     }
+    
     return (
         <li className={classNames}>
             <span className="list-group-item-label">{name}</span>
@@ -25,5 +27,6 @@ const EmployersListItem = ({name, salary, increase}) => {
         </li>
     )
 }
+
 
 export default EmployersListItem;
