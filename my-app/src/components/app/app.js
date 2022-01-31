@@ -12,9 +12,9 @@ class App extends Component{
         super(props);
         this.state = {
             data: [
-                {name: "Fred Durst", salary: 800, id: 1},
-                {name: "Wes Borland", salary: 3000, id: 2},
-                {name: "John Otto", salary: 15000, id: 3}
+                {name: "Fred Durst", salary: 800, increase: false, rise: true, id: 1},
+                {name: "Wes Borland", salary: 3000, increase: true, rise: false, id: 2},
+                {name: "John Otto", salary: 15000, increase: false, rise: false, id: 3}
             ],
             test: "testString"
         }
@@ -46,6 +46,8 @@ class App extends Component{
         const newItem = {
             name: name, 
             salary: salary,
+            increase: false,
+            rise: false,
             id: this.getLastId() + 1
         }
         //we can make new array by getting old array directly from state and then change current array in state from setState function:
@@ -58,20 +60,50 @@ class App extends Component{
 
         //or we can make it from setState function:
         this.setState(({data})=>{
-            const newArray = [...data, newItem]
-            return{
-                data: newArray
+            if(newItem.name.length > 3 && newItem.salary > 0){
+                const newArray = [...data, newItem]
+                return{
+                    data: newArray
+                }
             }
+
         })
         
     } 
+
+    onToggleProp = (id, prop) =>{
+        //one way
+        // this.setState(({data}) => {
+        //     const index = data.findIndex(elem => elem.id === id);
+
+        //     const old = data[index];
+
+        //     const newItem = {...old, increase: !old.increase};
+
+        //     const newArray = [...data.slice(0, index), newItem, ...data.slice(index+1)];
+        //     return{
+        //         data: newArray
+        //     }
+        // })
+
+        //and another
+        this.setState(({data}) => ({
+            data: data.map(item => {
+                if(item.id === id){
+                    return {...item, [prop]: !item[prop]}
+                }
+                return item;
+            })
+        }))
+    }
     
     render(){
         const {data} = this.state;
         this.getLastId()
         return(
             <div className="app">
-                <AppInfo/>
+                <AppInfo
+                    data={data}/>
     
                 <div className="search-panel">
                     <SearchPanel/>
@@ -80,7 +112,8 @@ class App extends Component{
     
                 <EmployersList 
                     data={data}
-                    onDelete={this.deleteItem}/>
+                    onDelete={this.deleteItem}
+                    onToggleProp={this.onToggleProp}/>
                 <EmployersAddForm
                     onAddition={this.addItem}/>
             </div>
