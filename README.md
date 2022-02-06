@@ -1,4 +1,4 @@
-# reactPracticeProject1
+# Workers Directory -- My React Practice Project #1
 
 Project can be reached on: https://nlipatov.github.io/reactPracticeProject1/
 
