@@ -145,7 +145,7 @@ class App extends Component{
         const visibleData = this.filterPost(this.searchEmp(data, term), filter);
         this.getLastId()
         return(
-            <div className="app">
+            <div className="app" style={{width: "fit-content"}}>
                 <AppInfo
                     data={data}/>
     
