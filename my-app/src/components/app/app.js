@@ -22,7 +22,7 @@ class App extends Component{
     }
 
     getLastId = ()=>{
-        return this.state.data.at(-1).id
+        return this.state.data.length
     }
 
     deleteItem = (id) => {
