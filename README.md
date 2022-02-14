@@ -1,6 +1,5 @@
 # Personnel Management
 
-Online demo: https://nlipatov.github.io/reactPracticeProject1/
 
 Functionality:
 Click on worker name to promote, click on coockie to pay worker a bonus;
