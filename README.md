@@ -1,6 +1,6 @@
-# Workers Directory -- My React Practice Project #1
+# Personnel Management
 
-Project can be reached on: https://nlipatov.github.io/reactPracticeProject1/
+Online demo: https://nlipatov.github.io/reactPracticeProject1/
 
 Functionality:
 Click on worker name to promote, click on coockie to pay worker a bonus;
