@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/reactPracticeProject1/static/css/main.a8a10f8e.css",
-    "main.js": "/reactPracticeProject1/static/js/main.1fdab2aa.js",
-    "index.html": "/reactPracticeProject1/index.html",
-    "main.a8a10f8e.css.map": "/reactPracticeProject1/static/css/main.a8a10f8e.css.map",
-    "main.1fdab2aa.js.map": "/reactPracticeProject1/static/js/main.1fdab2aa.js.map"
+    "main.css": "/Personnel-Management/static/css/main.a8a10f8e.css",
+    "main.js": "/Personnel-Management/static/js/main.1fdab2aa.js",
+    "index.html": "/Personnel-Management/index.html",
+    "main.a8a10f8e.css.map": "/Personnel-Management/static/css/main.a8a10f8e.css.map",
+    "main.1fdab2aa.js.map": "/Personnel-Management/static/js/main.1fdab2aa.js.map"
   },
   "entrypoints": [
     "static/css/main.a8a10f8e.css",
