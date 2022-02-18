@@ -1,5 +1,7 @@
 # Personnel Management
 
+Online Demo: https://nlipatov.github.io/Personnel-Management/
+
 
 Functionality:
 Click on worker name to promote, click on coockie to pay worker a bonus;
